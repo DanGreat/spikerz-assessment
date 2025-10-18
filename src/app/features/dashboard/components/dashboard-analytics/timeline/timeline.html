@@ -1,0 +1,38 @@
+<ngx-graph
+  class="graph-container"
+  [nodes]="nodes()"
+  [links]="links()"
+  [curve]="curve()"
+  [layoutSettings]="layoutSettings()"
+  [zoomLevel]="0.89"
+>
+  <ng-template #nodeTemplate let-node>
+    <svg:g>
+      <svg:image
+        [attr.xlink:href]="node.data.img"
+        x="3"
+        y="5"
+        width="80"
+        height="80"
+        (mouseenter)="op.toggle($event, nodeTemplate)"
+        (mouseleave)="op.toggle($event, nodeTemplate)"
+      ></svg:image>
+
+      <svg:text
+        text-anchor="middle"
+        x="45"
+        y="100"
+        style="font-size: 13px; fill: #333; font-weight: 600"
+      >
+        {{ node.label }}
+      </svg:text>
+      <svg:text text-anchor="middle" x="45" y="118" style="font-size: 12px; fill: #333">
+        {{ node.data.ip }}
+      </svg:text>
+    </svg:g>
+  </ng-template>
+</ngx-graph>
+
+<p-popover #op>
+  <h4>Custom Content</h4>
+</p-popover>

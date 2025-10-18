@@ -1,0 +1,8 @@
+<app-side-bar (toggleSideNav)="onToggleSideNav($event)" />
+
+<div
+  class="h-[100vh] overflow-hidden z-0 relative top-0 bg-[#f4f7fa] transition-all duration-300 ease-in-out p-[2.1875rem]"
+  [class]="getBodyClass()"
+>
+  <router-outlet />
+</div>

@@ -1,0 +1,81 @@
+<nav
+  class="flex flex-col justify-between gap-4 transition-all duration-200 ease-in-out fixed z-10 w-[5rem] h-[100vh]"
+  [class.sidenav-expanded]="expanded()"
+>
+  <div class="relative">
+    <div class="flex items-center justify-between p-[0.938rem] w-full h-[4rem]">
+      <button class="cursor-pointer" (click)="toggleSideBar()">Logo</button>
+
+      <button
+        class="block cursor-pointer rounded-full bg-[var(--p-primary-500)] text-white p-2 grid place-content-center absolute -right-[0.9rem] border-2 border-[#F0F1F3] w-8 h-8"
+        (click)="toggleSideBar()"
+      >
+        <i [class]="expanded() ? 'pi pi-chevron-left' : 'pi pi-chevron-right'"></i>
+      </button>
+    </div>
+
+    <ul class="list-style-none p-[0.938rem] m-0 flex flex-col items-center overflow-y-auto">
+      @for (menu of topMenu(); track menu; let i = $index) {
+      <li
+        class="w-full mb-[0.625rem] hover:bg-[var(--p-zinc-100)] rounded-[1rem] cursor-pointer"
+        [pTooltip]="!expanded() ? menu.label : ''"
+        tooltipPosition="right"
+      >
+        <a
+          class="flex items-center gap-2 pl-[0.9rem] h-[2.6rem] text-decoration-none rounded-[1rem] transition-all duration-200 ease-in-out acva-para-2"
+          [routerLink]="menu.path"
+          routerLinkActive="bg-[var(--p-primary-200)]"
+        >
+          <app-icon [iconSrc]="menu.icon" />
+
+          @if (expanded()) {
+          <span>{{ menu.label }}</span>
+          }
+        </a>
+      </li>
+      }
+    </ul>
+  </div>
+
+  <div class="px-[0.938rem]">
+    <ul class="list-style-none m-0 flex flex-col items-center overflow-y-auto">
+      @for (menu of bottomMenu(); track menu; let i = $index) {
+      <li
+        class="w-full mb-[0.625rem] hover:bg-[var(--p-zinc-100)] rounded-[1rem] cursor-pointer"
+        [pTooltip]="!expanded() ? menu.label : ''"
+        tooltipPosition="right"
+      >
+        <a
+          class="flex items-center gap-2 pl-[0.9rem] h-[2.6rem] text-decoration-none rounded-[1rem] transition-all duration-200 ease-in-out acva-para-2"
+          [routerLink]="menu.path"
+          routerLinkActive="bg-[var(--p-primary-200)]"
+        >
+          <app-icon [iconSrc]="menu.icon" />
+
+          @if (expanded()) {
+          <span>{{ menu.label }}</span>
+          }
+        </a>
+      </li>
+      }
+    </ul>
+
+    <p-divider />
+
+    <div class="flex justify-between items-center py-4">
+      <div class="flex gap-2 items-center">
+        <img src="images/profile-picture.jpg" alt="Profile Pic" width="50" height="50" />
+        @if (expanded()) {
+        <div>
+          <p>Lorem</p>
+          <p>Lorem</p>
+        </div>
+        }
+      </div>
+
+      @if(expanded()) {
+      <app-icon iconSrc="icons/log-out.svg" />
+      }
+    </div>
+  </div>
+</nav>

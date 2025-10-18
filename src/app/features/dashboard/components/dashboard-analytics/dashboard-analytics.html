@@ -1,0 +1,35 @@
+<section class="p-8 grid gap-8">
+  <div class="grid gap-5">
+    <h1>Lorem Lorem Lorem</h1>
+
+    <div class="bg-[var(--bg-color)] p-4 rounded-[var(--card-border-radius)]">
+      <app-timeline />
+
+      <p-divider />
+
+      <ul class="flex gap-4 items-center">
+        <li class="text-[var(--p-red-500)] font-semibold flex gap-2 items-center">
+          <app-icon iconSrc="icons/failed-icon.svg" styleClass="w-[1.5rem]" /> Lorem
+        </li>
+
+        <li class="text-[var(--p-yellow-500)] font-semibold flex gap-2 items-center">
+          <app-icon iconSrc="icons/warn-icon.svg" styleClass="w-[1.5rem]" /> Lorem
+        </li>
+
+        <li class="text-[var(--p-green-500)] font-semibold flex gap-2 items-center">
+          <app-icon iconSrc="icons/success-icon.svg" styleClass="w-[1.5rem]" /> Lorem
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid gap-5">
+    <h1>Lorem ipsum dolor sit</h1>
+
+    <!-- GRAPHS -->
+    <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
+      <app-contextual-risk-table />
+      <app-contextual-risk-chart />
+    </div>
+  </div>
+</section>

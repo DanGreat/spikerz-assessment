@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@use '../public/styles/typography' as *;
+@use '../public/styles/components/index' as *;
+@import 'tailwindcss';
+@import 'primeicons/primeicons.css';
+@import '../public/styles/variables';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  cursor: auto !important;
+  font-family: 'Public Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  scroll-behavior: smooth;
+  background-color: var(--bg-color);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
