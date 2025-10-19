@@ -1,0 +1,5 @@
+@reference "tailwindcss";
+
+section {
+  @apply rounded-[var(--card-border-radius)] bg-white shadow-[var(--card-shadow)] p-1;
+}

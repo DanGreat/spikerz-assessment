@@ -1,42 +1,34 @@
-<div class="p-4 rounded-[var(--card-border-radius)] bg-white shadow-[var(--card-shadow)]">
-        <h2 class="mb-4">Contextual Risk</h2>
+<section>
+  <h2>Contextual Risk</h2>
 
-        <div class="flex gap-8 items-center">
-          <ul class="leading-10">
-            <li class="flex gap-2 items-center">
-              <p-badge severity="danger" /> <strong>2</strong> Critical
-            </li>
-            <li class="flex gap-2 items-center">
-              <p-badge severity="danger" /> <strong>0</strong> High
-            </li>
-            <li class="flex gap-2 items-center">
-              <p-badge severity="warn" /> <strong>0</strong> Medium
-            </li>
-            <li class="flex gap-2 items-center">
-              <p-badge severity="success" /> <strong>0</strong> Low
-            </li>
-          </ul>
+  <div class="wrapper">
+    <ul>
+      <li><p-badge severity="danger" /> <strong>2</strong> Critical</li>
+      <li><p-badge severity="danger" /> <strong>0</strong> High</li>
+      <li><p-badge severity="warn" /> <strong>0</strong> Medium</li>
+      <li><p-badge severity="success" /> <strong>0</strong> Low</li>
+    </ul>
 
-          <div class="progress-wrapper">
-            <round-progress
-              [current]="2"
-              [max]="2"
-              [color]="'#C6190D'"
-              [background]="'#eaeaea'"
-              [radius]="100"
-              [stroke]="12"
-              [semicircle]="false"
-              [rounded]="true"
-              [clockwise]="true"
-              [responsive]="false"
-              [duration]="800"
-              [animation]="'easeOutCubic'"
-              [animationDelay]="0"
-              [innerCircleFill]="'transparent'"
-            ></round-progress>
+    <div class="progress-wrapper">
+      <round-progress
+        [current]="2"
+        [max]="2"
+        [color]="'#C6190D'"
+        [background]="'#eaeaea'"
+        [radius]="100"
+        [stroke]="12"
+        [semicircle]="false"
+        [rounded]="true"
+        [clockwise]="true"
+        [responsive]="false"
+        [duration]="800"
+        [animation]="'easeOutCubic'"
+        [animationDelay]="0"
+        [innerCircleFill]="'transparent'"
+      ></round-progress>
 
-            <!-- Overlay your text -->
-            <div class="progress-text">2</div>
-          </div>
-        </div>
-      </div>
+      <!-- Overlay text -->
+      <div class="progress-text">2</div>
+    </div>
+  </div>
+</section>

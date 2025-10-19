@@ -1,0 +1,9 @@
+@reference "tailwindcss";
+
+section {
+    @apply rounded-[15px] px-5 py-3 bg-white shadow-[var(--card-shadow)] transition-all cursor-pointer;
+
+    .panel {
+        @apply bg-[var(--bg-color)] p-3 rounded-[8px] flex items-center w-full;
+    }
+}

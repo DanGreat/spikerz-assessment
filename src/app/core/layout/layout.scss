@@ -1,7 +1,5 @@
-// :host {
-//     display: block;
-//   width: 100vw;
-//   height: 100vh;
-//   margin: 0;
-//   padding: 0;
-// }
+@reference "tailwindcss";
+
+.content-wrapper {
+  @apply h-[100vh] overflow-hidden z-0 relative top-0 bg-[#f4f7fa] transition-all duration-300 ease-in-out p-[2.1875rem];
+}

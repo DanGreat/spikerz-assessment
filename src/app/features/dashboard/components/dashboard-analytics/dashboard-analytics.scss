@@ -1,0 +1,30 @@
+@reference "tailwindcss";
+
+section {
+  @apply grid gap-8;
+
+  .top-section,
+  .bottom-section {
+    @apply grid gap-5;
+  }
+
+  .top-section {
+    div {
+      @apply bg-[var(--bg-color)] p-4 rounded-[var(--card-border-radius)];
+
+      ul {
+        @apply flex gap-4 items-center;
+
+        li {
+          @apply font-semibold flex gap-2 items-center;
+        }
+      }
+    }
+  }
+
+  .bottom-section {
+    div {
+      @apply grid lg:grid-cols-2 grid-cols-1 gap-4;
+    }
+  }
+}

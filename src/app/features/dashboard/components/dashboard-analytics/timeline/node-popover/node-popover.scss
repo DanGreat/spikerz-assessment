@@ -1,0 +1,51 @@
+.popover-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+
+  span {
+    font-weight: 600;
+    color: #333;
+  }
+}
+
+.popover-body {
+  p {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.6rem;
+
+    span {
+      padding-inline: 5px;
+      padding-block: 2px;
+      border-radius: 6px;
+
+      &.error {
+        background-color: #fff1f0;
+        color: #e5372b;
+      }
+
+      &.warn {
+        background-color: #fff9ed;
+        color: #eba622;
+      }
+
+      &.info {
+        background-color: #ecf5ff;
+        color: #0053b5;
+      }
+
+      &.success {
+        background-color: #e9faf0;
+        color: #02983e;
+      }
+
+      &.neutral {
+        background-color: #f2edff;
+        color: #6236cc;
+      }
+    }
+  }
+}

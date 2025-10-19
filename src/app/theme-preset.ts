@@ -17,6 +17,9 @@ const SpikerzPreset = definePreset(Aura, {
       950: '#013417',
     },
   },
+  components: {
+    borderRadius: '15px',
+  },
 });
 
 export default SpikerzPreset;

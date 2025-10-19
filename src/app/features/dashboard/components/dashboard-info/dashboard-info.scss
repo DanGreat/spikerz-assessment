@@ -1,0 +1,25 @@
+@reference "tailwindcss";
+
+section {
+  @apply grid gap-4;
+
+  p {
+    @apply leading-[1.6rem];
+  }
+
+  .details {
+    @apply grid gap-3;
+
+    div {
+        @apply flex gap-8;
+
+        p:first-child {
+            @apply font-bold;
+        }
+    }
+  }
+
+  .techniques {
+    @apply grid gap-4;
+  }
+}

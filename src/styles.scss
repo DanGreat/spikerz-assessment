@@ -1,9 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 @use '../public/styles/typography' as *;
 @use '../public/styles/components/index' as *;
+
 @import 'tailwindcss';
 @import 'primeicons/primeicons.css';
-@import '../public/styles/variables';
+
+:root {
+  --bg-color: #fafafa;
+  --hover-bg-color: #fafafa;
+  --text-color: #525d73;
+  --chart-text-color: #383874;
+  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  --card-border-radius: 15px;
+  --table-header-text-size: 13px;
+}
 
 *,
 *::before,

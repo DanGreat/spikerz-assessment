@@ -1,9 +1,9 @@
-<section class="grid gap-4 p-8">
+<section>
   <!-- DESCRIPTION -->
   <div>
     <h1>Description</h1>
 
-    <p class="leading-[1.6rem]">
+    <p>
       Lorem ipsum dolor sit amet consectetur. Aenean sodales pellentesque gravida nibh et magna
       faucibus. Dui commodo ut metus amet egestas habitant viverra. Quisque fusce senectus facilisis
       non diam leo nulla sem pellentesque. Sit in vel sed cursus metus sit fringilla vestibulum.
@@ -14,7 +14,7 @@
   <div>
     <h1>Extra</h1>
 
-    <p class="leading-[1.6rem]">
+    <p>
       Lorem ipsum dolor sit amet consectetur. Tempus a id adipiscing fames egestas tellus dis
       pretium tempus. Justo nisl nisl lorem lectus id ornare. Rhoncus in egestas in amet porttitor
       pellentesque sit. Amet gravida integer velit felis. Eu consectetur interdum auctor sed
@@ -28,39 +28,39 @@
   <p-divider />
 
   <!-- DETAILS -->
-  <section class="grid gap-3">
-    <div class="flex gap-8">
-      <p class="font-bold">Lorem ipsum dolor</p>
+  <section class="details">
+    <div>
+      <p>Lorem ipsum dolor</p>
       <p>10/19/2017</p>
     </div>
 
-    <div class="flex gap-8">
-      <p class="font-bold">Lorem ipsum dolor</p>
+    <div>
+      <p>Lorem ipsum dolor</p>
       <p>Ut</p>
     </div>
 
-    <div class="flex gap-8">
-      <p class="font-bold">Lorem ipsum dolor</p>
+    <div>
+      <p>Lorem ipsum dolor</p>
       <p>Eros</p>
     </div>
 
-    <div class="flex gap-8">
-      <p class="font-bold">Lorem ipsum dolor</p>
-      <p>Yes</p>
+    <div>
+      <p>Lorem ipsum dolor</p>
+      <p class="flex items-center gap-2"> <app-icon iconSrc="icons/check.svg" styleClass="w-[1rem]" /> Yes</p>
     </div>
 
-    <div class="flex gap-8">
-      <p class="font-bold">Lorem ipsum dolor</p>
+    <div>
+      <p>Lorem ipsum dolor</p>
       <p>Sit</p>
     </div>
 
-    <div class="flex gap-8">
-      <p class="font-bold">Lorem ipsum dolor</p>
+    <div>
+      <p>Lorem ipsum dolor</p>
       <p>Lorem ipsum dolor</p>
     </div>
 
-    <div class="flex gap-8">
-      <p class="font-bold">Lorem ipsum dolor</p>
+    <div>
+      <p>Lorem ipsum dolor</p>
       <p>Lorem ipsum dolor</p>
     </div>
   </section>
@@ -68,10 +68,9 @@
   <p-divider />
 
   <!-- TECHNIQUES -->
-
-  <div class="grid gap-4">
+  <div class="techniques">
     @for (technique of techniques(); track technique;) {
-    <app-technique-card [technique]="technique" />
+      <app-technique-card [technique]="technique" />
     }
   </div>
 </section>

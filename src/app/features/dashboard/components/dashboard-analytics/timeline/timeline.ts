@@ -1,20 +1,22 @@
-import { Component, NO_ERRORS_SCHEMA, signal, viewChild } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { Edge, NgxGraphModule, Node } from '@swimlane/ngx-graph';
 import * as shape from 'd3-shape';
-import { Popover } from 'primeng/popover';
+import { fromEvent } from 'rxjs';
+import { NodePopover } from './node-popover/node-popover';
 
 @Component({
   selector: 'app-timeline',
-  imports: [NgxGraphModule, Popover],
-  schemas: [NO_ERRORS_SCHEMA],
+  imports: [NgxGraphModule, NodePopover],
   templateUrl: './timeline.html',
   styleUrl: './timeline.scss',
 })
-export class Timeline {
-  popover = viewChild<Popover>('popover');
-  selectedNode: Node | null = null;
+export class Timeline implements OnInit {
+  popoverVisible = signal<boolean>(false);
+  popoverX = signal<number>(0);
+  popoverY = signal<number>(0);
+  selectedNode = signal<Node | null>(null);
 
-  curve = signal(shape.curveBundle.beta(0.85));
+  curve = signal(shape.curveBundle.beta(1));
 
   nodes = signal<Node[]>([
     {
@@ -44,7 +46,7 @@ export class Timeline {
     },
   ]);
 
-  links =  signal<Edge[]>([
+  links = signal<Edge[]>([
     { id: 'a', source: '1', target: '2', label: '' },
     { id: 'b', source: '2', target: '3', label: '' },
     { id: 'c', source: '3', target: '4', label: '' },
@@ -55,8 +57,22 @@ export class Timeline {
     orientation: 'LR',
   });
 
-  showPopover(event: MouseEvent, node: Node): void {
-    this.selectedNode = node;
-    this.popover()?.toggle(event);
+  ngOnInit(): void {
+    this.hidePopover();
+  }
+
+  onNodeClick(event: MouseEvent, node: any) {
+    event.stopPropagation();
+    this.popoverVisible.set(true);
+    this.selectedNode.set(node);
+
+    this.popoverX.set(event.clientX + 10);
+    this.popoverY.set(event.clientY + 10);
+  }
+
+  hidePopover() {
+    fromEvent(document, 'click').subscribe(() => {
+      this.popoverVisible.set(false);
+    });
   }
 }

@@ -2,10 +2,11 @@ import { Component, signal } from '@angular/core';
 import { Divider } from 'primeng/divider';
 import { ITechnique } from '../../../../core/models/techniques';
 import { TechniqueCard } from '../../../../shared/components/technique-card/technique-card';
+import { Icon } from "../../../../shared/components/icon/icon";
 
 @Component({
   selector: 'app-dashboard-info',
-  imports: [Divider, TechniqueCard],
+  imports: [Divider, TechniqueCard, Icon],
   templateUrl: './dashboard-info.html',
   styleUrl: './dashboard-info.scss',
 })

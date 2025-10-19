@@ -1,16 +1,32 @@
+@reference "tailwindcss";
+
+section {
+  @apply p-4 rounded-[var(--card-border-radius)] bg-white shadow-[var(--card-shadow)];
+
+  h2 {
+    @apply mb-4 text-[var(--text-color)];
+  }
+
+  .wrapper {
+    @apply lg:flex gap-8 items-center;
+
+    ul {
+      @apply leading-10 text-[var(--chart-text-color)];
+
+      li {
+        @apply flex gap-2 items-center;
+      }
+    }
+  }
+}
+
 .progress-wrapper {
-  position: relative;
-  display: inline-block;
-  width: 200px;
-  height: 200px;
+  @apply relative inline-block w-[200px] h-[200px];
 }
 
 .progress-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  @apply absolute top-[50%] left-[50%] font-semibold;
   transform: translate(-50%, -50%);
   font-size: 1.8rem;
-  font-weight: 600;
-  color: #333;
+  color: var(--text-color);
 }

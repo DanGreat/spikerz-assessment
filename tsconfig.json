@@ -14,7 +14,9 @@
     "importHelpers": true,
     "target": "ES2022",
     "module": "preserve",
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

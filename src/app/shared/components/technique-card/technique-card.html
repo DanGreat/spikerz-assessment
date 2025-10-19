@@ -1,25 +1,24 @@
-<div
+<section
   (click)="toggleDescription()"
   (keydown)="toggleDescription()"
-  class="rounded-[15px] px-5 py-3 bg-white shadow-[var(--card-shadow)] transition-all cursor-pointer"
 >
   <h3 class="mb-4">{{ technique()?.label }}</h3>
 
-  <div class="bg-[var(--bg-color)] px-4 py-2 rounded-[8px] flex items-center gap-2 w-full">
-    <div class="flex gap-2 items-center">
-      <app-icon iconSrc="icons/server.svg" styleClass="w-[4rem]" />
-      <p>
-        Server 
-        <small>Server</small>
-      </p>
+  <div class="panel">
+    <div class="flex gap-2 items-center w-[40%]">
+      <app-icon iconSrc="icons/server.svg" styleClass="w-[3rem]" />
+      <div>
+        <p>Server</p>
+        <p class="text-[12px]">Server</p>
+      </div>
     </div>
 
     <p-divider layout="vertical" />
 
-    <p>Lorem ipsum dolor sit amet consectetur.</p>
+    <p class="flex-1">Lorem ipsum dolor sit amet consectetur.</p>
   </div>
 
   @if(expanded()) {
   <p class="mt-4">{{ technique()?.description }}</p>
   }
-</div>
+</section>

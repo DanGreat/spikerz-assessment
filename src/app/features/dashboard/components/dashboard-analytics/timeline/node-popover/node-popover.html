@@ -1,0 +1,79 @@
+<section>
+  <!-- Show header for node not the first -->
+  @if(node()?.id !== '1') {
+  <div class="popover-header">
+    <app-icon [iconSrc]="node()?.data?.img" styleClass="w-[2.5rem]" />
+    <div>
+      <p class="text-[13px] font-semibold">{{ node()?.label }}</p>
+      <p class="text-[9.45px] font-medium">{{ node()?.data?.ip }}</p>
+    </div>
+  </div>
+  } @if(node()?.id === '1') {
+  <div class="popover-body">
+    <p class="mb-3">
+      <span class="error">Lorem Ipsum Dolor Sit</span>
+    </p>
+
+    <div class="grid grid-cols-3 justify-end items-center gap-2 ml-8 mb-3">
+      <p>
+        <span class="error">1.2.3.4</span>
+      </p>
+      <p>
+        <span class="error">1.2.3.4</span>
+      </p>
+      <p>
+        <span class="error">1.2.3.4</span>
+      </p>
+      <p>
+        <span class="error">1.2.3.4</span>
+      </p>
+      <p>
+        <span class="error">1.2.3.4</span>
+      </p>
+      <p>
+        <span class="error">1.2.3.4</span>
+      </p>
+    </div>
+
+    <p>
+      <span class="neutral">Lorem: 1.2.3.4</span>
+    </p>
+  </div>
+  } @if(node()?.id === '2') {
+
+  <div class="popover-body">
+    <p>
+      <img src="icons/receipt.svg" alt="receipt" class="inline" /> Lorem: Loremipsum Loremipsum
+      <span class="neutral">1.2.3.4</span> <br />
+      <span class="neutral">1.2.3.4</span> Loremipsum <span class="neutral">1.2.3.4</span> &nbsp;
+      <span class="neutral">1.2.3.4</span>
+    </p>
+  </div>
+
+  } @if(node()?.id === '3') {
+  <div class="popover-body">
+    <p>
+      <img src="icons/receipt.svg" alt="receipt" class="inline" /> Lorem: Loremipsum Loremipsum
+      <span class="neutral">1.2.3.4</span> <br />
+      <span class="neutral">1.2.3.4</span> Loremipsum <span class="neutral">1.2.3.4</span> &nbsp;
+      <span class="neutral">1.2.3.4</span>
+    </p>
+  </div>
+  } @if(node()?.id === '4') {
+  <div class="popover-body">
+    <p>
+      <img src="icons/receipt.svg" alt="receipt" class="inline" /> Lorem:
+      <span class="warn">Lorem “ipsum"</span> <br />
+      Loremipsum <span class="info">lorem 1234,5678</span>
+    </p>
+  </div>
+  } @if(node()?.id === '5') {
+  <div class="popover-body">
+    <p>
+      <img src="icons/receipt.svg" alt="receipt" class="inline" /> Lorem:
+      <span class="warn">Lorem “ipsum"</span> <br />
+      Loremipsum <span class="info">lorem 1234,5678</span>
+    </p>
+  </div>
+  }
+</section>
