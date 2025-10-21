@@ -1,7 +1,4 @@
-<section
-  (click)="toggleDescription()"
-  (keydown)="toggleDescription()"
->
+<section tabindex="0" role="button" (click)="toggleDescription()" (keydown)="toggleDescription()">
   <h3 class="mb-4">{{ technique()?.label }}</h3>
 
   <div class="panel">
@@ -18,7 +15,7 @@
     <p class="flex-1">Lorem ipsum dolor sit amet consectetur.</p>
   </div>
 
-  @if(expanded()) {
-  <p class="mt-4">{{ technique()?.description }}</p>
+  @if (expanded()) {
+    <p class="mt-4">{{ technique()?.description }}</p>
   }
 </section>

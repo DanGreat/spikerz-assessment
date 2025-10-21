@@ -1,3 +1,4 @@
+@use '../../../../../../public/styles/media' as *;
 @reference "tailwindcss";
 
 section {
@@ -11,11 +12,11 @@ section {
     @apply grid gap-3;
 
     div {
-        @apply flex gap-8;
+      @apply flex flex-wrap gap-8;
 
-        p:first-child {
-            @apply font-bold;
-        }
+      p:first-child {
+        @apply font-bold;
+      }
     }
   }
 

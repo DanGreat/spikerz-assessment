@@ -8,7 +8,7 @@ section {
   }
 
   .wrapper {
-    @apply lg:flex gap-8 items-center;
+    @apply flex gap-8 items-center;
 
     ul {
       @apply leading-10 text-[var(--chart-text-color)];

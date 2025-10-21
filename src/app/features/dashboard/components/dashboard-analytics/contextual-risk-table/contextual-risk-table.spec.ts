@@ -8,9 +8,8 @@ describe('ContextualRiskTable', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ContextualRiskTable]
-    })
-    .compileComponents();
+      imports: [ContextualRiskTable],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ContextualRiskTable);
     component = fixture.componentInstance;

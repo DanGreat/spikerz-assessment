@@ -61,7 +61,7 @@ export class Timeline implements OnInit {
     this.hidePopover();
   }
 
-  onNodeClick(event: MouseEvent, node: any) {
+  onNodeClick(event: MouseEvent, node: Node) {
     event.stopPropagation();
     this.popoverVisible.set(true);
     this.selectedNode.set(node);

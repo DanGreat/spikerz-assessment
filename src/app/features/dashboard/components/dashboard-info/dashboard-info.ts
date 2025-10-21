@@ -2,7 +2,7 @@ import { Component, signal } from '@angular/core';
 import { Divider } from 'primeng/divider';
 import { ITechnique } from '../../../../core/models/techniques';
 import { TechniqueCard } from '../../../../shared/components/technique-card/technique-card';
-import { Icon } from "../../../../shared/components/icon/icon";
+import { Icon } from '../../../../shared/components/icon/icon';
 
 @Component({
   selector: 'app-dashboard-info',
@@ -19,8 +19,7 @@ export class DashboardInfo {
     },
     {
       label: 'Lorem S',
-      description:
-        `Lorem ipsum dolor sit amet consectetur. Quis viverra etiam pellentesque lectus semper in massa purus.
+      description: `Lorem ipsum dolor sit amet consectetur. Quis viverra etiam pellentesque lectus semper in massa purus.
          Auctor aenean aenean senectus massa dignissim vehicula mi erat purus. Praesent scelerisque aliquet metus
           sagittis dictum sed sed. Sed venenatis sed urna quam.
       `,

@@ -1,0 +1,5 @@
+@reference "tailwindcss";
+
+.content-wrapper {
+  @apply h-[100vh] overflow-hidden z-0 relative top-0 transition-all duration-300 ease-in-out p-[2.1875rem];
+}

@@ -1,3 +1,4 @@
+@use '../../../../../../public/styles/media' as *;
 @reference "tailwindcss";
 
 section {
@@ -24,7 +25,11 @@ section {
 
   .bottom-section {
     div {
-      @apply grid lg:grid-cols-2 grid-cols-1 gap-4;
+      @apply grid grid-cols-2 gap-4;
+
+      @include media-screen('lg') {
+        @apply grid-cols-1;
+      }
     }
   }
 }

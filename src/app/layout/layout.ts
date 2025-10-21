@@ -1,6 +1,6 @@
 import { Component, computed, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SideBar } from "./side-bar/side-bar";
+import { SideBar } from './side-bar/side-bar';
 
 @Component({
   selector: 'app-layout',
@@ -9,10 +9,10 @@ import { SideBar } from "./side-bar/side-bar";
   styleUrl: './layout.scss',
 })
 export class Layout {
-  expanded = signal<boolean>(true);
+  expanded = signal<boolean>(false);
   screenWidth = signal<number>(window.innerWidth);
 
-  onToggleSideNav(expanded: boolean ) {
+  onToggleSideNav(expanded: boolean) {
     this.expanded.set(expanded);
   }
 

@@ -1,7 +1,7 @@
 @reference "tailwindcss";
 
 nav {
-  @apply flex flex-col justify-between gap-4 transition-all duration-200 ease-in-out fixed z-10 w-[5rem] h-[100vh] p-[0.938rem];
+  @apply flex flex-col justify-between gap-4 transition-all duration-200 ease-in-out fixed z-10 w-[5rem] h-[100vh] p-[0.938rem] bg-[#fafafa];
   box-shadow: 16px 0 18px 0 #0000000f;
 
   &.sidenav-expanded {
@@ -24,7 +24,7 @@ nav {
     @apply list-none m-0 flex flex-col items-center overflow-y-auto;
 
     li {
-      @apply w-full mb-[0.625rem] hover:bg-[var(--p-zinc-100)] rounded-[1rem] cursor-pointer;
+      @apply w-full mb-[0.625rem] hover:bg-[var(--bg-color)] rounded-[1rem] cursor-pointer;
 
       a {
         @apply flex items-center gap-2 pl-[0.9rem] h-[2.6rem] no-underline rounded-[8px] transition-all duration-200 ease-in-out;

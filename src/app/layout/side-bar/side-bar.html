@@ -1,0 +1,59 @@
+<nav [class.sidenav-expanded]="expanded()">
+  <div class="relative">
+    <div class="logo-wrapper">
+      <app-icon iconSrc="images/logo.png" [styleClass]="expanded() ? 'w-8' : 'w-10'" />
+
+      <button class="toggle-button" (click)="toggleSideBar()">
+        <i [class]="expanded() ? 'pi pi-chevron-left' : 'pi pi-chevron-right'"></i>
+      </button>
+    </div>
+
+    <ul>
+      @for (menu of topMenu(); track menu; let i = $index) {
+        <li [pTooltip]="!expanded() ? menu.label : ''" tooltipPosition="right">
+          <a [routerLink]="menu.path" routerLinkActive="bg-[var(--p-primary-200)]">
+            <app-icon [iconSrc]="menu.icon" />
+
+            @if (expanded()) {
+              <span>{{ menu.label }}</span>
+            }
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+
+  <div>
+    <ul>
+      @for (menu of bottomMenu(); track menu; let i = $index) {
+        <li [pTooltip]="!expanded() ? menu.label : ''" tooltipPosition="right">
+          <a [routerLink]="menu.path" routerLinkActive="bg-[var(--p-primary-200)]">
+            <app-icon [iconSrc]="menu.icon" />
+
+            @if (expanded()) {
+              <span>{{ menu.label }}</span>
+            }
+          </a>
+        </li>
+      }
+    </ul>
+
+    <p-divider />
+
+    <div class="flex justify-between items-center py-4">
+      <div class="flex gap-2 items-center">
+        <img src="images/profile-picture.jpg" alt="Profile Pic" width="50" height="50" />
+        @if (expanded()) {
+          <div>
+            <p>Lorem</p>
+            <p>Lorem</p>
+          </div>
+        }
+      </div>
+
+      @if (expanded()) {
+        <app-icon iconSrc="icons/log-out.svg" />
+      }
+    </div>
+  </div>
+</nav>

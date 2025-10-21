@@ -46,7 +46,9 @@
 
     <div>
       <p>Lorem ipsum dolor</p>
-      <p class="flex items-center gap-2"> <app-icon iconSrc="icons/check.svg" styleClass="w-[1rem]" /> Yes</p>
+      <p class="flex items-center gap-2">
+        <app-icon iconSrc="icons/check.svg" styleClass="w-[1rem]" /> Yes
+      </p>
     </div>
 
     <div>
@@ -69,7 +71,7 @@
 
   <!-- TECHNIQUES -->
   <div class="techniques">
-    @for (technique of techniques(); track technique;) {
+    @for (technique of techniques(); track technique) {
       <app-technique-card [technique]="technique" />
     }
   </div>

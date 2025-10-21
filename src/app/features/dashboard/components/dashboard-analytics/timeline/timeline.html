@@ -34,14 +34,16 @@
 </ngx-graph>
 
 <!-- Tooltip / Popover -->
-@if(popoverVisible()) {
-<div
-  class="node-popover"
-  [style.top.px]="popoverY()"
-  [style.left.px]="popoverX()"
-  (click)="$event.stopPropagation()"
-  (keydown)="$event.stopPropagation()"
->
-  <app-node-popover [node]="selectedNode()" />
-</div>
+@if (popoverVisible()) {
+  <div
+    class="node-popover"
+    tabindex="0"
+    role="dialog"
+    [style.top.px]="popoverY()"
+    [style.left.px]="popoverX()"
+    (click)="$event.stopPropagation()"
+    (keydown)="$event.stopPropagation()"
+  >
+    <app-node-popover [node]="selectedNode()" />
+  </div>
 }
