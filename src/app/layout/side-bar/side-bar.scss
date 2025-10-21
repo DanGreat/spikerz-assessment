@@ -1,3 +1,4 @@
+@use '../../../../public/styles/media' as *;
 @reference "tailwindcss";
 
 nav {
@@ -12,7 +13,7 @@ nav {
     @apply flex items-center justify-between p-[0.938rem] w-full h-[4rem];
 
     .toggle-button {
-      @apply block cursor-pointer rounded-full bg-[var(--p-primary-500)] text-white p-2 grid place-content-center absolute -right-[1.8rem] border-2 border-[#F0F1F3] w-8 h-8;
+      @apply block cursor-pointer rounded-full bg-[var(--p-primary-500)] text-white p-2 grid place-content-center absolute -right-[1.8rem] border-2 border-[var(--bg-color)] w-8 h-8;
     }
 
     button {

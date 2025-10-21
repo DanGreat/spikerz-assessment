@@ -1,5 +1,15 @@
-<div class="max-w-[1400px] mx-auto">
-  <app-side-bar (toggleSideNav)="onToggleSideNav($event)" />
+<div class="wrapper">
+  <p-button
+    [icon]="showMobileNav() ? 'pi pi-times' : 'pi pi-bars'"
+    size="small"
+    [rounded]="true"
+    [raised]="true"
+    (onClick)="toggleMenu()"
+  />
+
+  <div class="side-bar-wrapper" [class]="showMobileNav() ? 'show-mobile-nav' : ''">
+    <app-side-bar (toggleSideNav)="onToggleSideNav($event)" />
+  </div>
 
   <div class="content-wrapper" [class]="getBodyClass()">
     <router-outlet />

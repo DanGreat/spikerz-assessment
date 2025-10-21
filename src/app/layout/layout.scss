@@ -1,5 +1,32 @@
+@use '../../../public/styles/media' as *;
 @reference "tailwindcss";
 
-.content-wrapper {
-  @apply h-[100vh] overflow-hidden z-0 relative top-0 transition-all duration-300 ease-in-out p-[2.1875rem];
+.wrapper {
+  @apply max-w-[1400px] mx-auto relative;
+
+  p-button {
+    @apply absolute z-10 top-4 right-4 hidden;
+
+    @include media-screen('sm') {
+      @apply block;
+    }
+  }
+
+  .side-bar-wrapper {
+    @include media-screen('sm') {
+      @apply hidden;
+    }
+
+    &.show-mobile-nav {
+      @apply block;
+    }
+  }
+
+  .content-wrapper {
+    @apply h-[100vh]  overflow-hidden z-0 relative top-0 transition-all duration-300 ease-in-out p-[2.1875rem];
+
+    @include media-screen('sm') {
+      @apply w-full p-4 !m-0;
+    }
+  }
 }

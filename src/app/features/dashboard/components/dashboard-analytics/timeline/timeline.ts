@@ -66,7 +66,7 @@ export class Timeline implements OnInit {
     this.popoverVisible.set(true);
     this.selectedNode.set(node);
 
-    this.popoverX.set(event.clientX + 10);
+    this.popoverX.set(event.clientX - 150);
     this.popoverY.set(event.clientY + 10);
   }
 
