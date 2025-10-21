@@ -12,10 +12,14 @@ section {
     @apply grid gap-3;
 
     div {
-      @apply flex flex-wrap gap-8;
+      @apply flex flex-wrap gap-8 w-full;
 
       p:first-child {
-        @apply font-bold;
+        @apply font-bold w-[40%];
+      }
+
+      p:last-child {
+        @apply flex-1;
       }
     }
   }
