@@ -1,5 +1,5 @@
 <section>
-  <p-table [value]="assests()" [tableStyle]="{ 'min-width': '20rem' }" size="small">
+  <p-table [value]="pagedAssets()" [tableStyle]="{ 'min-width': '20rem' }" size="small">
     <ng-template #header>
       <tr>
         <th scope="col">Asset</th>
@@ -27,7 +27,7 @@
     (onPageChange)="onPageChange($event)"
     [first]="first()"
     [rows]="rows()"
-    [totalRecords]="2"
+    [totalRecords]="6"
     [showCurrentPageReport]="true"
     [showPageLinks]="false"
     [showJumpToPageDropdown]="false"
