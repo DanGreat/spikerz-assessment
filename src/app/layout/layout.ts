@@ -10,7 +10,6 @@ import { SideBar } from './side-bar/side-bar';
 })
 export class Layout {
   expanded = signal<boolean>(false);
-  screenWidth = signal<number>(window.innerWidth);
 
   onToggleSideNav(expanded: boolean) {
     this.expanded.set(expanded);
@@ -19,11 +18,9 @@ export class Layout {
   getBodyClass = computed(() => {
     let styleClass = '';
     const expanded = this.expanded();
-    const screenWidth = this.screenWidth();
 
-    if (expanded && screenWidth > 768) styleClass = 'w-[calc(100%_-_16rem)] ml-[16rem]!';
-    else if (!expanded && screenWidth > 768) styleClass = 'w-[calc(100%_-_5rem)] ml-[5rem]!';
-    else if (expanded && screenWidth <= 768) styleClass = 'w-[calc(100%_-_5rem)] ml-[5rem]!';
+    if (expanded) styleClass = 'w-[calc(100%_-_16rem)] ml-[16rem]!';
+    if (!expanded) styleClass = 'w-[calc(100%_-_5rem)] ml-[5rem]!';
 
     return styleClass;
   });

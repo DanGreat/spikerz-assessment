@@ -8,7 +8,7 @@ section {
   }
 
   .wrapper {
-    @apply flex gap-8 items-center;
+    @apply flex gap-4;
 
     ul {
       @apply leading-10 text-[var(--chart-text-color)];
@@ -25,7 +25,7 @@ section {
 }
 
 .progress-text {
-  @apply absolute top-[50%] left-[50%] font-semibold;
+  @apply absolute top-[35%] left-[35%] font-semibold;
   transform: translate(-50%, -50%);
   font-size: 1.8rem;
   color: var(--text-color);
